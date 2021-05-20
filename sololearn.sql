@@ -6,6 +6,8 @@ CREATE TABLE Persons (
     City varchar(255)
 );
 
+
+
 SELECT PersonID, LastName, FirstName, Address, City
 FROM Persons;
 
