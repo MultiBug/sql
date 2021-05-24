@@ -26,3 +26,22 @@ SELECT * from Employees;
 ```roomsql
 При вставке записей в таблицу с помощью выражения SQL INSERT, вы должны предоставить значения для каждого столбца, который не имеет значения по умолчанию, или не поддерживает NULL.
 ```
+
+```roomsql
+Вставка Информации
+```
+
+В качестве альтернативы, вы можете указать названия столбцов таблицы в выражении INSERT INTO:
+
+INSERT INTO table_name (column1, column2, column3, ...,columnN)  
+VALUES (value1, value2, value3,...valueN);
+
+column1, column2, ..., columnN являются названиями столбцов, в которые вы хотите вставить данные.
+
+INSERT INTO Employees (ID, FirstName, LastName, Age)
+VALUES (8, 'Anthony', 'Young', 35);
+SELECT * FROM Employees; 
+
+```roomsql
+Вы можете определить свой собственный порядок столбцов, до тех пор, как значения указаны в том же порядке, что и столбцы.
+```
