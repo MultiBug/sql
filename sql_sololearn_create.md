@@ -109,3 +109,36 @@ CREATE TABLE Users
 ```roomsql
 Теперь вы можете использовать запросы INSERT INTO для вставки информации в таблицу.
 ```
+
+Задача:
+```roomsql
+Вам необходимо создать a leaderboard для видеоигры
+В ней должны быть следующие столбцы:
+- place (INT)
+- nickname (VARCHAR)
+- rating (INT)
+
+Напишите запрос, чтобы создать таблицу и добавить в нее 3 лучших игроков:
+1, Predator, 9500
+2, JohnWar, 9300
+3, NightWarrior, 8900
+
+В конце отобразите таблицу с результатами
+Вызовите выражение INSERT, чтобы добавить необходимые данные в таблицу.
+```
+Решение:
+```roomsql
+CREATE TABLE leaderboard
+(
+   place int,
+   nickname varchar(225), 
+   rating int
+);
+INSERT INTO leaderboard
+VALUES (1, 'Predator', 9500);
+INSERT INTO leaderboard
+VALUES (2, 'JohnWar', 9300);
+INSERT INTO leaderboard
+VALUES (3, 'NightWarrior', 8900);
+select * from leaderboard
+```
