@@ -16,4 +16,4 @@ FROM Persons;
 INSERT INTO Persons
 (PersonID, LastName, FirstName, Address, City)
 VALUES(2, 'Alan', 'Don', 'Stive', 'Ben');
-VALUES(3, 'Vova', 'Egor', 'Vlad', 'Vasya')
+VALUES(3, 'Vova', 'Egor', 'Vladislav', 'Vasya')
