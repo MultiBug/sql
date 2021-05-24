@@ -19,6 +19,7 @@ UNION
 
 Все выражения SELECT внутри UNION должны иметь одинаковое количество столбцов. Столбцы также должны иметь одинаковые типы данных. Также, столбцы в каждом выражении SELECT должны быть в одинаковом порядке.
 Синтаксис оператора UNION выглядит следующим образом:
+
 SELECT column_name(s) FROM table1
 UNION
 SELECT column_name(s) FROM table2;
@@ -42,3 +43,21 @@ SELECT FirstName, LastName, NULL FROM otherContacts;
 ```roomsql
 Оператор UNION используется для комбинирования наборов результатов двух и более выражений SELECT.
 ```
+
+```roomsql
+Ключевое слово DESC сортирует результаты в порядке убывания. 
+По аналогии, ASC сортирует результаты в порядке возрастания.
+```
+
+```roomsql
+UNION ALL
+```
+UNION ALL выбирает все строки из каждой таблицы и комбинирует их в одну таблицу. 
+
+Следующее SQL выражение использует UNION ALL для выбора информации из Первой и Второй таблиц:
+
+SELECT ID, FirstName, LastName, City FROM First
+UNION ALL
+SELECT ID, FirstName, LastName, City FROM Second;
+
+Как видите, в результате набор также содержит дубликаты строк.
